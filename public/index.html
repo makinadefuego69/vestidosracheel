@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atelier Vestidos</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav" aria-label="Principal">
+        <a class="brand" href="/">Atelier Vestidos</a>
+        <div class="nav-links">
+          <a href="#catalogo">Catalogo</a>
+          <a href="#cita">Cita</a>
+        </div>
+      </nav>
+
+      <section class="hero-content">
+        <p class="eyebrow">Coleccion 2026</p>
+        <h1>Vestidos para momentos que se recuerdan.</h1>
+        <p>
+          Encuentra piezas de gala, coctel, novia y casual con estilos listos
+          para reservar una prueba.
+        </p>
+        <a class="button primary" href="#catalogo">Ver vestidos</a>
+      </section>
+    </header>
+
+    <main>
+      <section class="section intro">
+        <div>
+          <p class="eyebrow">Seleccion curada</p>
+          <h2>Prendas con presencia, medidas claras y atencion personalizada.</h2>
+        </div>
+        <p>
+          Filtra por ocasion, talla o busqueda. Cuando encuentres tu favorito,
+          envia una consulta y el backend registrara la solicitud.
+        </p>
+      </section>
+
+      <section class="section catalog" id="catalogo">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Catalogo</p>
+            <h2>Vestidos disponibles</h2>
+          </div>
+          <span id="count" class="count">0 vestidos</span>
+        </div>
+
+        <form class="filters" id="filters">
+          <label>
+            Buscar
+            <input id="search" name="q" type="search" placeholder="Nombre, color..." />
+          </label>
+          <label>
+            Categoria
+            <select id="category" name="category"></select>
+          </label>
+          <label>
+            Talla
+            <select id="size" name="size"></select>
+          </label>
+        </form>
+
+        <div class="grid" id="dressGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="section appointment" id="cita">
+        <div class="appointment-copy">
+          <p class="eyebrow">Reserva</p>
+          <h2>Agenda una prueba o solicita mas detalles.</h2>
+          <p>
+            Completa el formulario y lo conectamos con el vestido elegido. La
+            respuesta del backend aparecera al enviarlo.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label>
+            Nombre
+            <input name="name" required placeholder="Tu nombre" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required placeholder="correo@ejemplo.com" />
+          </label>
+          <label>
+            Telefono
+            <input name="phone" placeholder="+51 999 999 999" />
+          </label>
+          <label>
+            Vestido
+            <select name="dressId" id="dressSelect" required></select>
+          </label>
+          <label class="full">
+            Mensaje
+            <textarea name="message" required placeholder="Cuentanos la fecha, talla aproximada o evento."></textarea>
+          </label>
+          <button class="button primary full" type="submit">Enviar consulta</button>
+          <p class="form-status full" id="formStatus" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Atelier Vestidos</p>
+      <p>Gala, novia, coctel y casual</p>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

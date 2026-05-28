@@ -1,0 +1,17 @@
+{
+  "name": "atelier-vestidos",
+  "version": "1.0.0",
+  "description": "Pagina web de vestidos con frontend y backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "vestidos",
+    "frontend",
+    "backend"
+  ],
+  "author": "",
+  "license": "MIT"
+}
